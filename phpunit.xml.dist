@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php"
+         backupGlobals="false"
+         backupStaticAttributes="false"
+         colors="true"
+         verbose="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         processIsolation="false"
+         stopOnFailure="false">
+    <php>
+        <ini name="error_reporting" value="-1" />
+    </php>
+    <testsuites>
+        <testsuite name="multiline-queue Test Suite">
+            <directory>./test</directory>
+        </testsuite>
+    </testsuites>
+    <coverage includeUncoveredFiles="true"
+              processUncoveredFiles="true"
+              ignoreDeprecatedCodeUnits="true"
+              disableCodeCoverageIgnore="true">
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+
+        <exclude>
+            <directory suffix=".php">./src/generated</directory>
+            <file>./vendor/autoload.php</file>
+        </exclude>
+
+        <!-- <report>
+            <clover outputFile="clover.xml"/>
+            <crap4j outputFile="crap4j.xml" threshold="50"/>
+            <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90"/>
+            <php outputFile="coverage.php"/>
+            <text outputFile="coverage.txt" showUncoveredFiles="false" showOnlySummary="true"/>
+            <xml outputDirectory="xml-coverage"/>
+        </report> -->
+    </coverage>
+    <logging>
+        <junit outputFile="test/build/unit_report.xml"/>
+    </logging>
+</phpunit>

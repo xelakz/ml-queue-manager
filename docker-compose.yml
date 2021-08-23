@@ -1,0 +1,29 @@
+version: "3"
+services:
+    ml-qm:
+        image: ninepinetech/ml-qm:latest
+        environment: 
+            REDIS_HOST: ml-qm-redis
+            KAFKA_HOST: ml-qm-kafka
+            KAFKA_PORT: 9092
+        container_name: ml-qm
+        tty: true
+        volumes:
+            - ./:/var/www/html
+        links:
+            - "ml-qm-kafka:kafka"
+            - "ml-qm-redis:redis"
+    ml-qm-kafka:
+        image: ninepinetech/ml-kafka
+        container_name: ml-qm-kafka
+        ports:
+            - "9092:9092"
+            - "2181:2181"
+        environment:
+            - ADVERTISED_HOST=ml-qm-kafka
+
+    ml-qm-redis:
+        image: redis:latest
+        container_name: ml-qm-redis
+        ports:
+            - "6379:6379"

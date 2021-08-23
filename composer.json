@@ -1,0 +1,31 @@
+{
+    "name": "9pine/multiline-queue",
+    "version":"1.0.0",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*",
+        "monolog/monolog": "^2.2",
+        "opis/closure": "^3.6",
+        "nategood/commando": "^0.4.0",
+        "longlang/phpkafka": "^1.1.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "nesbot/carbon": "^2.51",
+        "ramsey/uuid": "^4.1",
+        "symfony/dom-crawler": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "MultilineQM\\": "src",
+            "MultilineQMTest\\": "test"
+        }
+    },
+    "suggest": {
+        "php": ">=7.1",
+        "ext-swoole": ">=4.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9"
+    }
+}

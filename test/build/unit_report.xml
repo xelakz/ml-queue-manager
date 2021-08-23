@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/var/www/html/test" tests="6" assertions="5" errors="1" warnings="0" failures="0" skipped="0" time="0.733833">
+    <testsuite name="CacheTest" file="/var/www/html/test/CacheTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.624039">
+      <testcase name="testRedisConnection" class="CacheTest" classname="CacheTest" file="/var/www/html/test/CacheTest.php" line="10" assertions="1" time="0.624039"/>
+    </testsuite>
+    <testsuite name="ConfigObjectTest" file="/var/www/html/test/ConfigTest.php" tests="1" assertions="0" errors="1" warnings="0" failures="0" skipped="0" time="0.000073">
+      <testcase name="testStructure" class="ConfigObjectTest" classname="ConfigObjectTest" file="/var/www/html/test/ConfigTest.php" line="8" assertions="0" time="0.000073">
+        <error type="PHPUnit\Framework\RiskyTestError">ConfigObjectTest::testStructure
+This test did not perform any assertions
+
+/var/www/html/test/ConfigTest.php:8</error>
+      </testcase>
+    </testsuite>
+    <testsuite name="ProxyIPTest" file="/var/www/html/test/ProxyIPTest.php" tests="4" assertions="4" errors="0" warnings="0" failures="0" skipped="0" time="0.109721">
+      <testcase name="testSetIP" class="ProxyIPTest" classname="ProxyIPTest" file="/var/www/html/test/ProxyIPTest.php" line="14" assertions="1" time="0.001933"/>
+      <testcase name="testNotEmptyIP" class="ProxyIPTest" classname="ProxyIPTest" file="/var/www/html/test/ProxyIPTest.php" line="25" assertions="1" time="0.105883"/>
+      <testcase name="testGetSameIP" class="ProxyIPTest" classname="ProxyIPTest" file="/var/www/html/test/ProxyIPTest.php" line="35" assertions="1" time="0.001035"/>
+      <testcase name="testGetDifferentIP" class="ProxyIPTest" classname="ProxyIPTest" file="/var/www/html/test/ProxyIPTest.php" line="46" assertions="1" time="0.000870"/>
+    </testsuite>
+  </testsuite>
+</testsuites>
